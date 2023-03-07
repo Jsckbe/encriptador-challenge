@@ -42,7 +42,7 @@ main{
     padding-left: 20px;
     box-sizing: content-box;
     background: rgb(230, 246, 245);
-    background-image: url("/img/Muñeco.png");
+    background-image: url("../img/Muñeco.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
