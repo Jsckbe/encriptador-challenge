@@ -8,4 +8,6 @@ Challenge encriptador
 <a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/rFcFJX26/encriptador2.jpg" alt="encriptador2"/></a><br/><br/>
 -->
 
+![](https://github.com/Jsckbe/encriptador-challenge/blob/main/img/encriptador-landing-page.jpg)
+
 
