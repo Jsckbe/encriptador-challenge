@@ -3,6 +3,7 @@ const mensaje = document.querySelector(".mensaje");
 
 const texto1 = document.querySelector(".texto1");
 const texto2 = document.querySelector(".texto2");
+const informacion = document.querySelector(".informacion");
 
 /*La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -12,10 +13,26 @@ La letra "u" es convertida para "ufat"
 */
 
 function btnEncriptar(){
-    const textoEncriptado = encriptar(textArea.value)
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
-    mensaje.style.backgroundImage = "none";
+
+    if (mensaje.value == "" && textArea.value == "") {
+        alert("Ingrese un mensaje");
+        mensaje.style.backgroundImage = "none";
+        
+    }
+    else {
+        const textoEncriptado = encriptar(textArea.value)
+        mensaje.value = textoEncriptado;
+        textArea.value = "";
+        mensaje.style.backgroundImage = "none";
+
+        // Cambiar el mensaje en texto1
+        texto1.textContent = "¡ Se ha encriptado el mensaje !";
+
+        // Limpiar los mensajes en texto2
+        texto2.style.display = "none";
+        informacion.textContent = "Solo letras minúsculas y sin acentos";
+    }
+    
 }
 
 //Function de Encriptación
@@ -36,6 +53,8 @@ function encriptar(stringEncriptada){
         const textoEncriptado = desencriptar(textArea.value)
         mensaje.value = textoEncriptado;
         textArea.value = "";
+        informacion.textContent = "Desencriptado";
+        
     }
 
     //Function de Desencriptación
@@ -67,10 +86,16 @@ function limpiar(){
 
 function btnCopiar(){
     
-    navigator.clipboard.writeText(mensaje.value);
-    //mensaje.select();
-    mensaje.value = "";
-    texto2.value = " ";  
-    alert("Se copió el texto")
-    texto1.value = "";  //*
+    if (mensaje.value == "" && textArea.value == "") {
+        alert("Ingrese un mensaje");
+    } else {
+        navigator.clipboard.writeText(mensaje.value);
+        //mensaje.select();
+        mensaje.value = "";
+        texto2.value = " ";  
+        alert("Se copió el texto")
+        texto1.style.display = "none";
+        texto2.style.display = "none";
+    }
+    
 }
