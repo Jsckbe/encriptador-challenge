@@ -84,6 +84,19 @@ main{
     margin-top: 18px;
  }
 
+ /*Resaltar botones cuando se pase el mouse encima*/
+ .btn-desencriptar:hover {
+   background: #4fb8b8;
+ }
+
+ .btn-encriptar:hover {
+   background: #4fb8b8;
+ }
+
+ .btn-copiar:hover {
+   background: #664ed5;
+ }
+
  .btn-desencriptar{
     background: #D8DFE8; /* Dark blue/dark-blue-300 */
     border: 1px solid #0A3871;
